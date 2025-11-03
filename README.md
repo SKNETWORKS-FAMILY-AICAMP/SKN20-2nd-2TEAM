@@ -5,9 +5,9 @@
    - 팀명 : 2팀
    - 팀원
 
-| | | | |
-|---|---|---|---|
-| <img src="사진폴더/pika.jpeg" width="120"> <br> [박찬](https://github.com/djdjdjdfh1) | <img src="사진폴더/jaman.jpeg" width="140"> <br> [최소영](https://github.com/sy-choi25) | <img src="사진폴더/pichu.jpeg" width="120"> <br> [나호성](https://github.com/BBuSang) | <img src="사진폴더/ulpak.jpg" width="120"> <br> [권규리](https://github.com/gyur1eek) | <img src="사진폴더/pika.jpeg" width="120"> <br> [박준석](https://github.com/Ipodizar)
+| | | | | |
+|---|---|---|---|---|
+| <img src="사진폴더/pika.jpeg" width="120"> <br> [박찬](https://github.com/djdjdjdfh1) | <img src="사진폴더/jaman.jpeg" width="140"> <br> [최소영](https://github.com/sy-choi25) | <img src="사진폴더/pichu.jpeg" width="120"> <br> [나호성](https://github.com/BBuSang) | <img src="사진폴더/ulpak.jpg" width="120"> <br> [권규리](https://github.com/gyur1eek) | <img src="사진폴더/pika.jpeg" width="120"> <br> [박준석](https://github.com/Ipodizar) |
 
 
 ---
