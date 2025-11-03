@@ -1,9 +1,16 @@
-"# 🏋️ Gym Churn Prediction - 헬스장 회원 이탈 예측 프로젝트
+# 🏋️ Gym Churn Prediction - 헬스장 회원 이탈 예측 프로젝트
 
-![Python](https://img.shields.io/badge/Python-3.11+-blue.svg)
-![TensorFlow](https://img.shields.io/badge/TensorFlow-2.x-orange.svg)
-![scikit-learn](https://img.shields.io/badge/scikit--learn-1.3+-green.svg)
-![License](https://img.shields.io/badge/License-MIT-yellow.svg)
+## 1. 팀 소개 🧑‍🤝‍🧑
+
+   - 팀명 : 2팀
+   - 팀원
+
+| | | | | |
+|---|---|---|---|---|
+| <img src="사진폴더/pika.jpeg" width="120"> <br> [박찬](https://github.com/djdjdjdfh1) | <img src="사진폴더/jaman.jpeg" width="140"> <br> [최소영](https://github.com/sy-choi25) | <img src="사진폴더/pichu.jpeg" width="120"> <br> [나호성](https://github.com/BBuSang) | <img src="사진폴더/ulpak.jpg" width="120"> <br> [권규리](https://github.com/gyur1eek) | <img src="사진폴더/pika.jpeg" width="120"> <br> [박준석](https://github.com/Ipodizar) |
+
+
+---
 
 ## 📋 프로젝트 개요
 
@@ -21,6 +28,26 @@
 - **이탈률**: 약 30%
 
 ---
+
+## 📚 기술 스택
+
+### 데이터 분석
+- **Pandas**: 데이터 처리 및 전처리
+- **NumPy**: 수치 연산
+- **Matplotlib/Seaborn**: 데이터 시각화
+
+### 머신러닝
+- **scikit-learn**: 전통적 ML 알고리즘, 전처리, 평가
+- **XGBoost**: 그래디언트 부스팅
+- **LightGBM**: 경량화 부스팅
+- **imbalanced-learn**: SMOTE (클래스 불균형 해결)
+
+### 딥러닝
+- **TensorFlow/Keras**: 신경망 구축 및 학습
+
+### 최적화
+- **RandomizedSearchCV**: 하이퍼파라미터 자동 탐색
+- **StackingClassifier**: 앙상블 학습
 
 ## 🗂️ 프로젝트 구조
 
@@ -99,10 +126,7 @@ SKN20-2ed/
 
 ### 🏆 최종 모델 성능
 
-| 모델 | F1 Score | Accuracy | Precision | Recall | AUC-ROC |
-|------|----------|----------|-----------|--------|---------|
-| **Stacking Ensemble** | **0.7674** | **0.9163** | **0.7396** | **0.7970** | **0.9712** |
-| Neural Network | 0.7108 | 0.9013 | 0.6769 | 0.7479 | 0.9563 |
+# 이미지 자리
 
 ### 📊 모델 개선 과정
 
@@ -139,34 +163,7 @@ seaborn >= 0.12.0
 imbalanced-learn >= 0.11.0
 ```
 
-### 설치 방법
-```bash
-# 저장소 클론
-git clone https://github.com/SKNETWORKS-FAMILY-AICAMP/SKN20-2nd-2TEAM.git
-cd SKN20-2ed
 
-# 필요한 패키지 설치
-pip install pandas numpy scikit-learn xgboost lightgbm tensorflow matplotlib seaborn imbalanced-learn
-```
-
-### 실행 방법
-
-#### 1. 전체 분석 파이프라인 실행
-```bash
-# 1단계: 탐색적 데이터 분석
-jupyter notebook project/notebooks/EDA.ipynb
-
-# 2단계: 모델 학습 및 튜닝
-jupyter notebook project/notebooks/Model_Training.ipynb
-
-# 3단계: 모델 평가 및 분석
-jupyter notebook project/notebooks/Model_Evaluation.ipynb
-```
-
-#### 2. 통합 노트북 실행
-```bash
-jupyter notebook project/notebooks/index2.ipynb
-```
 
 ---
 
@@ -248,52 +245,31 @@ high_risk_customers = churn_probability >= 0.50  # 최적 임계값
 
 ---
 
-## 📚 기술 스택
+### 설치 방법
+```bash
+# 저장소 클론
+git clone https://github.com/SKNETWORKS-FAMILY-AICAMP/SKN20-2nd-2TEAM.git
+cd SKN20-2ed
 
-### 데이터 분석
-- **Pandas**: 데이터 처리 및 전처리
-- **NumPy**: 수치 연산
-- **Matplotlib/Seaborn**: 데이터 시각화
+# 필요한 패키지 설치
+pip install pandas numpy scikit-learn xgboost lightgbm tensorflow matplotlib seaborn imbalanced-learn
+```
 
-### 머신러닝
-- **scikit-learn**: 전통적 ML 알고리즘, 전처리, 평가
-- **XGBoost**: 그래디언트 부스팅
-- **LightGBM**: 경량화 부스팅
-- **imbalanced-learn**: SMOTE (클래스 불균형 해결)
+### 실행 방법
 
-### 딥러닝
-- **TensorFlow/Keras**: 신경망 구축 및 학습
+#### 1. 전체 분석 파이프라인 실행
+```bash
+# 1단계: 탐색적 데이터 분석
+jupyter notebook project/notebooks/EDA.ipynb
 
-### 최적화
-- **RandomizedSearchCV**: 하이퍼파라미터 자동 탐색
-- **StackingClassifier**: 앙상블 학습
+# 2단계: 모델 학습 및 튜닝
+jupyter notebook project/notebooks/Model_Training.ipynb
 
----
+# 3단계: 모델 평가 및 분석
+jupyter notebook project/notebooks/Model_Evaluation.ipynb
+```
 
-## 👥 팀 구성
-
-- **Team**: SKN20-2nd-2TEAM
-- **Organization**: SKNETWORKS-FAMILY-AICAMP
-- **Branch**: hosung
-
----
-
-## 📄 라이선스
-
-이 프로젝트는 MIT 라이선스를 따릅니다.
-
----
-
-## 📞 문의
-
-프로젝트 관련 문의사항이 있으시면 이슈를 등록해주세요.
-
----
-
-## 🙏 감사의 말
-
-이 프로젝트는 SK Networks AI Camp의 지원을 받아 진행되었습니다.
-
----
-
-**Last Updated**: 2025년 11월 3일" 
+#### 2. 통합 노트북 실행
+```bash
+jupyter notebook project/notebooks/index2.ipynb
+```
