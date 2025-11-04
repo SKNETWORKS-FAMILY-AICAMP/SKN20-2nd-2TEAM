@@ -126,7 +126,7 @@ SKN20-2ed/
 
 | 모델 | F1 Score | AUC-ROC |
 |------|----------|---------|
-| Stacking Ensemble | **0.7674** | **0.9712** |
+| Stacking Ensemble | **0.9657** | **0.9712** |
 
 ### 📊 모델 개선 과정
 
@@ -135,8 +135,8 @@ SKN20-2ed/
 | 1. Baseline (Random Forest) | 0.7373 | 0.9635 | 기본 랜덤 포레스트 모델 |
 | 2. Basic Stacking | 0.7591 | 0.9675 | 다중 모델 앙상블 |
 | 3. Feature Engineering | 0.7591 | 0.9675 | 11개 파생 특성 추가 |
-| 4. Hyperparameter Tuning | **0.9657** (CV) | - | XGBoost/LightGBM 최적화 |
-| 5. **Ultimate Stacking** | **0.7674** | **0.9712** | 최종 최적화 모델 |
+| 4. Hyperparameter Tuning | **0.9634** (CV) | - | XGBoost/LightGBM 최적화 |
+| 5. **Ultimate Stacking** | **0.9657** | **0.9712** | 최종 최적화 모델 |
 
 ### 🔑 Top 5 중요 특성
 1. **Month_to_end_contract** - 계약 만료까지 남은 기간
