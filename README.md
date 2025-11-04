@@ -7,9 +7,7 @@
 
 | | | | | |
 |---|---|---|---|---|
-| <img src="사진폴더/pika.jpeg" width="120"> <br> [박찬](https://github.com/djdjdjdfh1) | <img src="사진폴더/jaman.jpeg" width="140"> <br> [최소영](https://github.com/sy-choi25) | <img src="사진폴더/pichu.jpeg" width="120"> <br> [나호성](https://github.com/BBuSang) | <img src="사진폴더/ulpak.jpg" width="120"> <br> [권규리](https://github.com/gyur1eek) | <img src="사진폴더/pika.jpeg" width="120"> <br> [박준석](https://github.com/Ipodizar) |
-
-
+| <img src="project\etc\images\뚱이.jpg" width="120" height="120" style="object-fit: contain; background-color: black;"> <br> [박찬](https://github.com/djdjdjdfh1) | <img src="project\etc\images\다람이.jpg" width="120" height="120" style="object-fit: contain; background-color: black;"> <br> [최소영](https://github.com/sy-choi25) | <img src="project\etc\images\래리.jpg" width="120" height="120" style="object-fit: contain; background-color: black;"> <br> [나호성](https://github.com/BBuSang) | <img src="project\etc\images\스폰지밥.jpg" width="120" height="120" style="object-fit: contain; background-color: black;"> <br> [권규리](https://github.com/gyur1eek) | <img src="project\etc\images\징징이2.jpg" width="120" height="120" style="object-fit: contain; background-color: black;"> <br> [박준석](https://github.com/Ipodizar) |
 ---
 
 ## 📋 프로젝트 개요
@@ -57,30 +55,33 @@ SKN20-2ed/
 │   ├── config/                          # 설정 파일
 │   ├── data/
 │   │   ├── raw/                         # 원본 데이터
-│   │   │   └── gym_churn_us.csv
+│   │   │   └── gym_churn_us.csv        # 헬스장 회원 데이터
 │   │   └── processed/                   # 전처리된 데이터
 │   ├── models/
-│   │   └── 2024_churn_model/           # 학습된 모델 저장
-│   │       ├── stacking_ultimate.pkl   # 최종 앙상블 모델
-│   │       ├── scaler_enh.pkl          # 스케일러
-│   │       ├── nn_model.h5             # 딥러닝 모델
-│   │       └── best_threshold.txt      # 최적 임계값
+│   │   ├── 2024_churn_model/           # 학습된 모델 저장
+│   │   │   ├── stacking_ultimate.pkl   # 최종 앙상블 모델
+│   │   │   ├── scaler_enh.pkl          # StandardScaler
+│   │   │   ├── nn_model.h5             # 딥러닝 모델
+│   │   │   └── best_threshold.txt      # 최적 임계값 (0.50)
+│   │   └── churn_models/               # 기타 모델 버전
 │   ├── notebooks/
 │   │   ├── EDA.ipynb                   # 📊 탐색적 데이터 분석
 │   │   ├── Model_Training.ipynb        # 🤖 모델 학습 및 튜닝
 │   │   ├── Model_Evaluation.ipynb      # 📈 모델 평가 및 분석
-│   │   └── index2.ipynb                # 통합 작업 노트북
+│   │   ├── index2.ipynb                # 🔄 통합 작업 노트북
+│   │   └── streamlit.py                # 🌐 대시보드 웹 애플리케이션
 │   ├── output/
-│   │   ├── predictions/                # 예측 결과
+│   │   ├── predictions/                # 예측 결과 저장
 │   │   ├── reports/                    # 분석 보고서
-│   │   │   └── final_evaluation_report.txt
 │   │   └── visualizations/             # 시각화 결과
-│   │       ├── confusion_matrices.png
-│   │       ├── roc_pr_curves.png
-│   │       ├── improvement_progress.png
-│   │       └── feature_importance.png
-│   └── src/                            # 소스 코드
-└── README.md
+│   │       ├── confusion_matrices.png  # Confusion Matrix
+│   │       ├── roc_pr_curves.png       # ROC & PR Curves
+│   │       ├── improvement_progress.png # 성능 개선 과정
+│   │       └── feature_importance.png  # 특성 중요도
+│   └── etc/
+│       └── images/                     # 프로젝트 이미지 자료
+├── 상세 성능 분석 보고서.txt             # 모델 성능 상세 문서
+└── README.md                            # 프로젝트 설명서
 ```
 
 ---
@@ -126,7 +127,9 @@ SKN20-2ed/
 
 ### 🏆 최종 모델 성능
 
-# 이미지 자리
+| 모델 | F1 Score | AUC-ROC |
+|------|----------|---------|
+| Stacking Ensemble | **0.9657** | **0.9712** |
 
 ### 📊 모델 개선 과정
 
@@ -135,8 +138,8 @@ SKN20-2ed/
 | 1. Baseline (Random Forest) | 0.7373 | 0.9635 | 기본 랜덤 포레스트 모델 |
 | 2. Basic Stacking | 0.7591 | 0.9675 | 다중 모델 앙상블 |
 | 3. Feature Engineering | 0.7591 | 0.9675 | 11개 파생 특성 추가 |
-| 4. Hyperparameter Tuning | **0.9657** (CV) | - | XGBoost/LightGBM 최적화 |
-| 5. **Ultimate Stacking** | **0.7674** | **0.9712** | 최종 최적화 모델 |
+| 4. Hyperparameter Tuning | **0.9634** (CV) | - | XGBoost/LightGBM 최적화 |
+| 5. **Ultimate Stacking** | **0.9657** | **0.9712** | 최종 최적화 모델 |
 
 ### 🔑 Top 5 중요 특성
 1. **Month_to_end_contract** - 계약 만료까지 남은 기간
@@ -184,6 +187,40 @@ imbalanced-learn >= 0.11.0
 ### 4. 특성 중요도
 - Top 15 특성 시각화
 - 비즈니스 인사이트 도출
+
+---
+
+## 🌐 Streamlit 대시보드
+
+실시간 이탈 예측 및 분석을 위한 인터랙티브 웹 대시보드를 제공합니다.
+
+### 📱 주요 화면
+
+#### 1. 홈 화면
+<img src="project/etc/screenshot/screencapture-localhost-8501-2025-11-04-10_59_59.png" width="800">
+
+프로젝트 개요 및 핵심 성능 지표를 한눈에 확인할 수 있습니다.
+
+#### 2. 실시간 예측
+<img src="project/etc/screenshot/screencapture-localhost-8501-2025-11-04-11_01_35.png" width="800">
+
+회원 정보를 입력하면 즉시 이탈 확률을 예측하고 맞춤형 권장사항을 제공합니다.
+
+#### 3. 모델 성능
+<img src="project/etc/screenshot/screencapture-localhost-8501-2025-11-04-11_01_52.png" width="800">
+
+다양한 모델의 성능 비교 및 평가 메트릭을 시각화합니다.
+
+#### 4. 데이터 인사이트
+<img src="project/etc/screenshot/screencapture-localhost-8501-2025-11-04-11_02_05.png" width="800">
+
+특성 중요도 및 세그먼트별 분석 결과를 인터랙티브 차트로 제공합니다.
+
+#### 5. 비즈니스 권장사항
+<img src="project/etc/screenshot/screencapture-localhost-8501-2025-11-04-11_02_15.png" width="800">
+
+데이터 기반 비즈니스 전략 및 ROI 분석을 제시합니다.
+
 
 ---
 
