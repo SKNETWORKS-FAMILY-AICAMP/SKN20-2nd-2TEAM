@@ -7,7 +7,7 @@
 
 | | | | | |
 |---|---|---|---|---|
-| <img src="사진폴더/pika.jpeg" width="120"> <br> [박찬](https://github.com/djdjdjdfh1) | <img src="project\src\images\다람이.jpg" width="140"> <br> [최소영](https://github.com/sy-choi25) | <img src="사진폴더/pichu.jpeg" width="120"> <br> [나호성](https://github.com/BBuSang) | <img src="사진폴더/ulpak.jpg" width="120"> <br> [권규리](https://github.com/gyur1eek) | <img src="사진폴더/pika.jpeg" width="120"> <br> [박준석](https://github.com/Ipodizar) |
+| <img src="project\src\images\뚱이.jpg" width="120"> <br> [박찬](https://github.com/djdjdjdfh1) | <img src="project\src\images\다람이.jpg" width="140"> <br> [최소영](https://github.com/sy-choi25) | <img src="" width="120"> <br> [나호성](https://github.com/BBuSang) | <img src="project\src\images\스폰지밥.jpg" width="120"> <br> [권규리](https://github.com/gyur1eek) | <img src="project\src\images\징징이2.jpg" width="120"> <br> [박준석](https://github.com/Ipodizar) |
 
 
 ---
