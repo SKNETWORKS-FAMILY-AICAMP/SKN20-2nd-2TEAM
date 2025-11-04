@@ -48,7 +48,7 @@
 
 ### 2.3 시각화
 
-![Churn 분포](../visualizations/churn_distribution.png)
+![Churn 분포](../이미지/churn_distribution.png)
 
 *3가지 차트(막대/원/도넛)로 이탈 분포를 시각화*
 
@@ -89,7 +89,7 @@
 
 ### 3.3 시각화
 
-![수치형 변수 분포](../visualizations/numerical_distributions.png)
+![수치형 변수 분포](../이미지/numerical_distributions.png)
 
 *히스토그램과 박스플롯으로 유지/이탈 그룹 비교*
 
@@ -127,7 +127,7 @@
 
 ### 4.3 시각화
 
-![범주형 변수 이탈률](../visualizations/categorical_churn_rates.png)
+![범주형 변수 이탈률](../이미지/categorical_churn_rates.png)
 
 *각 범주형 변수별 이탈률 비교 막대그래프*
 
@@ -181,7 +181,7 @@
 
 ### 6.3 시각화
 
-![상관관계 분석](../visualizations/correlation_analysis.png)
+![상관관계 분석](../이미지/correlation_analysis.png)
 
 *히트맵과 Churn 상관계수 막대그래프*
 
@@ -206,7 +206,7 @@
 - **6개월 이상**: 이탈률이 10% 미만으로 급감
 - **장기 회원 (12개월+)**: 이탈률 5% 미만으로 매우 안정적
 
-![Lifetime 분석](../visualizations/lifetime_analysis.png)
+![Lifetime 분석](../이미지/lifetime_analysis.png)
 
 ### 7.2 Contract Period (계약 기간) 분석
 
@@ -223,7 +223,7 @@
 - 장기 계약자일수록 Lifetime과 수업 참여도 높음
 - 1개월 계약자가 전체의 46.3%를 차지하지만 이탈자의 83.9% 차지
 
-![계약 기간 분석](../visualizations/contract_analysis.png)
+![계약 기간 분석](../이미지/contract_analysis.png)
 
 ### 7.3 수업 참여도 분석
 
@@ -248,7 +248,7 @@
 - 그룹 수업 참여자의 이탈률이 20.6%p 낮음
 - 참여도가 이탈에 중요한 영향을 미침
 
-![수업 참여도 분석](../visualizations/class_engagement.png)
+![수업 참여도 분석](../이미지/class_engagement.png)
 
 ---
 
@@ -264,7 +264,7 @@
 - 이탈 그룹(빨간색)이 주로 낮은 Lifetime 영역에 분포
 - Age는 이탈과 명확한 패턴 없음
 
-![Pairplot](../visualizations/pairplot.png)
+![Pairplot](../이미지/pairplot.png)
 
 ### 8.2 3D 산점도
 
@@ -274,7 +274,7 @@
 - 이탈 그룹이 주로 낮은 Lifetime과 낮은 수업 빈도 영역에 집중
 - 추가 요금은 이탈 여부와 명확한 패턴 없음
 
-![3D 산점도](../visualizations/3d_scatter.png)
+![3D 산점도](../이미지/3d_scatter.png)
 
 ---
 

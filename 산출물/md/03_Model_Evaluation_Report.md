@@ -76,7 +76,7 @@
 
 ### 3.1 혼동 행렬 결과
 
-![Confusion Matrix](../visualizations/confusion_matrices.png)
+![Confusion Matrix](../이미지/confusion_matrices.png)
 
 ```
                     예측: 유지 (0)    예측: 이탈 (1)
@@ -146,7 +146,7 @@
 
 ### 4.1 ROC Curve 분석
 
-![ROC Curve](../visualizations/roc_pr_curves.png)
+![ROC Curve](../이미지지/roc_pr_curves.png)
 
 **ROC Curve 특성**:
 - **AUC-ROC**: 0.9712
@@ -161,7 +161,7 @@
 
 ### 4.2 Precision-Recall Curve 분석
 
-![PR Curve](../visualizations/roc_pr_curves.png)
+![PR Curve](../이미지/roc_pr_curves.png)
 
 **PR Curve 특성**:
 - **AP (Average Precision)**: 0.9657 (매우 높음)
@@ -322,7 +322,7 @@
 
 ### 6.1 특성 중요도 Top 10
 
-![Feature Importance](../visualizations/feature_importance.png)
+![Feature Importance](../이미지/feature_importance.png)
 
 | 순위 | 특성명 | 중요도 | 타입 | 설명 |
 |------|--------|--------|------|------|
@@ -441,7 +441,7 @@ Churn_Risk = (Lifetime ≤ 3) × 2 + (Avg_freq < 1) + (Month_to_end ≤ 1)
 
 ### 7.1 단계별 성능 변화
 
-![Improvement Progress](../visualizations/improvement_progress.png)
+![Improvement Progress](../이미지/improvement_progress.png)
 
 | 단계 | 모델/기법 | F1 Score | AUC-ROC | 개선폭 | 누적 개선률 |
 |------|-----------|----------|---------|--------|------------|
