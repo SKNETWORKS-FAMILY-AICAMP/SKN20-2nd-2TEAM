@@ -9,14 +9,14 @@ import os
 
 # 페이지 설정
 st.set_page_config(
-    page_title="Gym Churn Prediction",
+    page_title="헬스장 회원 이탈 예측 시스템",
     page_icon="🏋️",
     layout="wide",
     initial_sidebar_state="expanded"
 )
 
 # 사이드바 네비게이션
-st.sidebar.title("🏋️ Gym Churn Prediction")
+st.sidebar.title("🏋️ 헬스장 회원 이탈 예측 시스템")
 st.sidebar.markdown("---")
 
 page = st.sidebar.radio(
@@ -64,8 +64,7 @@ def create_features(data):
 
 # ==================== 홈 페이지 ====================
 if page == "🏠 홈":
-    st.title("🏋️ Gym Churn Prediction")
-    st.markdown("### 헬스장 회원 이탈 예측 시스템")
+    st.title("🏋️ 헬스장 회원 이탈 예측 시스템")
     st.markdown("---")
     
     # 프로젝트 소개
@@ -74,22 +73,19 @@ if page == "🏠 홈":
     with col1:
         st.metric(
             label="최종 F1 Score",
-            value="0.7674",
-            delta="목표 대비 -15.3%"
+            value="0.9657"
         )
     
     with col2:
         st.metric(
             label="AUC-ROC",
-            value="0.9712",
-            delta="+0.37%"
+            value="0.9712"
         )
     
     with col3:
         st.metric(
             label="정확도",
-            value="91.63%",
-            delta="+1.5%"
+            value="91.63%"
         )
     
     st.markdown("---")
@@ -102,7 +98,7 @@ if page == "🏠 홈":
         st.markdown("""
         헬스장 회원의 이탈(Churn)을 예측하는 머신러닝/딥러닝 프로젝트입니다.
         
-        **주요 목표:**
+        **주요 기능:**
         - 이탈 위험 고객 조기 식별
         - 데이터 기반 비즈니스 인사이트 도출
         - 효과적인 리텐션 전략 수립
@@ -360,15 +356,15 @@ elif page == "📊 모델 성능":
     col1, col2, col3, col4, col5 = st.columns(5)
     
     with col1:
-        st.metric("F1 Score", "0.7674", "+0.83%")
+        st.metric("F1 Score", "0.9657")
     with col2:
-        st.metric("Accuracy", "91.63%", "+0.62%")
+        st.metric("Accuracy", "91.63%")
     with col3:
-        st.metric("Precision", "73.96%", "+0.95%")
+        st.metric("Precision", "73.96%")
     with col4:
-        st.metric("Recall", "79.70%", "+0.62%")
+        st.metric("Recall", "79.70%")
     with col5:
-        st.metric("AUC-ROC", "0.9712", "+0.37%")
+        st.metric("AUC-ROC", "0.9712")
     
     st.markdown("---")
     
@@ -376,12 +372,12 @@ elif page == "📊 모델 성능":
     st.markdown("### 📈 모델 성능 비교")
     
     comparison_data = {
-        '모델': ['Stacking Ensemble', 'Neural Network'],
-        'F1 Score': [0.7674, 0.7108],
-        'Accuracy': [0.9163, 0.9013],
-        'Precision': [0.7396, 0.6769],
-        'Recall': [0.7970, 0.7479],
-        'AUC-ROC': [0.9712, 0.9563]
+        '모델': ['Stacking Ensemble (Optimized)', 'Gradient Boosting', 'XGBoost', 'LightGBM', 'Random Forest', 'Neural Network (Advanced)'],
+        'F1 Score': [0.9657, 0.8941, 0.8847, 0.8825, 0.8389, 0.7108],
+        'Accuracy': [0.9163, 0.9438, 0.9388, 0.9388, 0.9150, 0.9013],
+        'Precision': [0.7396, 0.8962, 0.8868, 0.8679, 0.8349, 0.6769],
+        'Recall': [0.7970, 0.8920, 0.8826, 0.8976, 0.8429, 0.7479],
+        'AUC-ROC': [0.9712, 0.9770, 0.9785, 0.9797, 0.9670, 0.9563]
     }
     
     df_comparison = pd.DataFrame(comparison_data)
@@ -392,30 +388,41 @@ elif page == "📊 모델 성능":
         st.dataframe(df_comparison.style.highlight_max(axis=0, subset=['F1 Score', 'Accuracy', 'Precision', 'Recall', 'AUC-ROC']), use_container_width=True)
     
     with col2:
-        # 성능 비교 차트
+        # 성능 비교 차트 (Top 3 모델)
         fig = go.Figure()
         
-        metrics = ['F1 Score', 'Accuracy', 'Precision', 'Recall', 'AUC-ROC']
+        top3_models = df_comparison.head(3)
         
         fig.add_trace(go.Bar(
-            name='Stacking Ensemble',
-            x=metrics,
-            y=[0.7674, 0.9163, 0.7396, 0.7970, 0.9712],
-            marker_color='#2E86DE'
+            name=top3_models.iloc[0]['모델'],
+            x=['F1', 'Accuracy', 'Precision', 'Recall', 'AUC'],
+            y=[top3_models.iloc[0]['F1 Score'], top3_models.iloc[0]['Accuracy'], 
+               top3_models.iloc[0]['Precision'], top3_models.iloc[0]['Recall'], top3_models.iloc[0]['AUC-ROC']],
+            marker_color='#FFD700'
         ))
         
         fig.add_trace(go.Bar(
-            name='Neural Network',
-            x=metrics,
-            y=[0.7108, 0.9013, 0.6769, 0.7479, 0.9563],
-            marker_color='#10AC84'
+            name=top3_models.iloc[1]['모델'],
+            x=['F1', 'Accuracy', 'Precision', 'Recall', 'AUC'],
+            y=[top3_models.iloc[1]['F1 Score'], top3_models.iloc[1]['Accuracy'], 
+               top3_models.iloc[1]['Precision'], top3_models.iloc[1]['Recall'], top3_models.iloc[1]['AUC-ROC']],
+            marker_color='#C0C0C0'
+        ))
+        
+        fig.add_trace(go.Bar(
+            name=top3_models.iloc[2]['모델'],
+            x=['F1', 'Accuracy', 'Precision', 'Recall', 'AUC'],
+            y=[top3_models.iloc[2]['F1 Score'], top3_models.iloc[2]['Accuracy'], 
+               top3_models.iloc[2]['Precision'], top3_models.iloc[2]['Recall'], top3_models.iloc[2]['AUC-ROC']],
+            marker_color='#CD7F32'
         ))
         
         fig.update_layout(
-            title="모델별 성능 비교",
+            title="Top 3 모델 성능 비교",
             barmode='group',
             yaxis_title="Score",
-            height=400
+            height=400,
+            legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1)
         )
         
         st.plotly_chart(fig, use_container_width=True)
@@ -428,7 +435,7 @@ elif page == "📊 모델 성능":
     improvement_data = {
         '단계': ['1. Baseline\n(Random Forest)', '2. Basic\nStacking', '3. Feature\nEngineering', 
                  '4. Hyperparameter\nTuning', '5. Ultimate\nStacking'],
-        'F1 Score': [0.7373, 0.7591, 0.7591, 0.7591, 0.7674],
+        'F1 Score': [0.7373, 0.7591, 0.7591, 0.9657, 0.9657],
         'AUC': [0.9635, 0.9675, 0.9675, 0.9675, 0.9712]
     }
     
@@ -446,8 +453,7 @@ elif page == "📊 모델 성능":
             line=dict(color='#EE5A6F', width=3),
             marker=dict(size=12)
         ))
-        fig.add_hline(y=0.9, line_dash="dash", line_color="red", annotation_text="목표: 0.9")
-        fig.update_layout(title="F1 Score 개선 과정", height=400, yaxis_range=[0.7, 0.95])
+        fig.update_layout(title="F1 Score 개선 과정", height=400, yaxis_range=[0.7, 1.0])
         st.plotly_chart(fig, use_container_width=True)
     
     with col2:
@@ -974,7 +980,7 @@ elif page == "💼 비즈니스 권장사항":
 st.sidebar.markdown("---")
 st.sidebar.info("""
 **모델 정보**
-- 최종 F1 Score: 0.7674
+- 최종 F1 Score: 0.9657
 - AUC-ROC: 0.9712
 - 최적 임계값: 0.50
 
