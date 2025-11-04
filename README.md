@@ -7,8 +7,6 @@
 
 | | | | | |
 |---|---|---|---|---|
-| | | | | |
-|---|---|---|---|---|
 | <img src="project\src\images\뚱이.jpg" width="120" height="120" style="object-fit: contain; background-color: black;"> <br> [박찬](https://github.com/djdjdjdfh1) | <img src="project\src\images\다람이.jpg" width="120" height="120" style="object-fit: contain; background-color: black;"> <br> [최소영](https://github.com/sy-choi25) | <img src="project\src\images\래리.jpg" width="120" height="120" style="object-fit: contain; background-color: black;"> <br> [나호성](https://github.com/BBuSang) | <img src="project\src\images\스폰지밥.jpg" width="120" height="120" style="object-fit: contain; background-color: black;"> <br> [권규리](https://github.com/gyur1eek) | <img src="project\src\images\징징이2.jpg" width="120" height="120" style="object-fit: contain; background-color: black;"> <br> [박준석](https://github.com/Ipodizar) |
 ---
 
