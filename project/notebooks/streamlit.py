@@ -73,19 +73,19 @@ if page == "🏠 홈":
     with col1:
         st.metric(
             label="최종 F1 Score",
-            value="0.9657"
+            value="0.9188"
         )
     
     with col2:
         st.metric(
             label="AUC-ROC",
-            value="0.9712"
+            value="0.9851"
         )
     
     with col3:
         st.metric(
             label="정확도",
-            value="91.63%"
+            value="95.63%"
         )
     
     st.markdown("---")
@@ -356,15 +356,15 @@ elif page == "📊 모델 성능":
     col1, col2, col3, col4, col5 = st.columns(5)
     
     with col1:
-        st.metric("F1 Score", "0.9657")
+        st.metric("F1 Score", "0.9188")
     with col2:
-        st.metric("Accuracy", "91.63%")
+        st.metric("Accuracy", "95.63%")
     with col3:
-        st.metric("Precision", "73.96%")
+        st.metric("Precision", "90.41%")
     with col4:
-        st.metric("Recall", "79.70%")
+        st.metric("Recall", "93.40%")
     with col5:
-        st.metric("AUC-ROC", "0.9712")
+        st.metric("AUC-ROC", "0.9851")
     
     st.markdown("---")
     
@@ -372,12 +372,12 @@ elif page == "📊 모델 성능":
     st.markdown("### 📈 모델 성능 비교")
     
     comparison_data = {
-        '모델': ['Stacking Ensemble (Optimized)', 'Gradient Boosting', 'XGBoost', 'LightGBM', 'Random Forest', 'Neural Network (Advanced)'],
-        'F1 Score': [0.9657, 0.8941, 0.8847, 0.8825, 0.8389, 0.7108],
-        'Accuracy': [0.9163, 0.9438, 0.9388, 0.9388, 0.9150, 0.9013],
-        'Precision': [0.7396, 0.8962, 0.8868, 0.8679, 0.8349, 0.6769],
-        'Recall': [0.7970, 0.8920, 0.8826, 0.8976, 0.8429, 0.7479],
-        'AUC-ROC': [0.9712, 0.9770, 0.9785, 0.9797, 0.9670, 0.9563]
+        '모델': ['Ultimate Stacking Ensemble', 'LightGBM (Tuned)', 'XGBoost (Tuned)', 'Gradient Boosting', 'Random Forest', 'Advanced NN'],
+        'F1 Score': [0.9188, 0.9089, 0.9054, 0.8941, 0.8389, 0.8233],
+        'Accuracy': [0.9563, 0.9538, 0.9525, 0.9438, 0.9150, 0.9225],
+        'Precision': [0.9041, 0.8962, 0.8868, 0.8962, 0.8349, 0.8431],
+        'Recall': [0.9340, 0.9218, 0.9244, 0.8920, 0.8429, 0.8039],
+        'AUC-ROC': [0.9851, 0.9838, 0.9825, 0.9770, 0.9670, 0.9612]
     }
     
     df_comparison = pd.DataFrame(comparison_data)
@@ -434,9 +434,9 @@ elif page == "📊 모델 성능":
     
     improvement_data = {
         '단계': ['1. Baseline\n(Random Forest)', '2. Basic\nStacking', '3. Feature\nEngineering', 
-                 '4. Hyperparameter\nTuning', '5. Ultimate\nStacking'],
-        'F1 Score': [0.7373, 0.7591, 0.7591, 0.9657, 0.9657],
-        'AUC': [0.9635, 0.9675, 0.9675, 0.9675, 0.9712]
+                 '4. Tuned Models\n(XGB/LGB)', '5. Ultimate\nStacking'],
+        'F1 Score': [0.7373, 0.7591, 0.8520, 0.9108, 0.9188],
+        'AUC': [0.9635, 0.9675, 0.9720, 0.9825, 0.9851]
     }
     
     df_improvement = pd.DataFrame(improvement_data)
@@ -980,14 +980,14 @@ elif page == "💼 비즈니스 권장사항":
 st.sidebar.markdown("---")
 st.sidebar.info("""
 **모델 정보**
-- 최종 F1 Score: 0.9657
-- AUC-ROC: 0.9712
-- 최적 임계값: 0.50
+- 최종 F1 Score: 0.9188
+- AUC-ROC: 0.9851
+- 최적 임계값: 0.30
 
 **데이터셋**
 - 총 샘플: 4,002개
 - 특성 수: 24개
-- 이탈률: 30%
+- 이탈률: 26.7%
 """)
 
 st.sidebar.markdown("---")

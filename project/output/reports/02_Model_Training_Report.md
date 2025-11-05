@@ -488,8 +488,8 @@ Non-trainable params: 448
 | 1 | Baseline (Random Forest) | 0.7373 | 0.9635 | - | 기본 모델 + SMOTE |
 | 2 | Basic Stacking | 0.8836 | 0.9754 | +0.1463 | 4개 모델 앙상블 |
 | 3 | Feature Engineering | 0.9100 | 0.9851 | +0.0264 | 11개 파생 특성 추가 |
-| 4 | Hyperparameter Tuning (CV) | 0.9657 | - | +0.0557 | XGBoost/LightGBM CV 최적화 |
-| 5 | **Ultimate Stacking** | **0.9188** | **0.9851** | **+0.0088** | **최종 앙상블 + 임계값 최적화** |
+| 4 | Tuned Models (XGB/LGB Test) | 0.9108 | 0.9825 | +0.0008 | XGBoost/LightGBM Test 평균 |
+| 5 | **Ultimate Stacking** | **0.9188** | **0.9851** | **+0.008** | **최종 앙상블 + 임계값 최적화** |
 
 ### 11.2 총 개선폭
 
@@ -508,11 +508,12 @@ Non-trainable params: 448
    - 11개 파생 특성으로 숨겨진 패턴 명시화
    - 튜닝 단계에서 큰 효과
 
-3. **하이퍼파라미터 튜닝** (+0.2050, +27.8%)
+3. **하이퍼파라미터 튜닝** (+0.0008, +0.09%)
    - RandomizedSearchCV로 최적 파라미터 탐색
-   - XGBoost: +33.1%, LightGBM: +34.2%
+   - XGBoost Test: 0.9100, LightGBM Test: 0.9117 (평균: 0.9108)
+   - CV Score는 높지만(0.9641, 0.9657) Test 성능이 더 중요
 
-4. **Stacking Ensemble** (+0.0234, +3.2%)
+4. **Stacking Ensemble** (+0.0080, +0.88%)
    - 4개 최적화 모델의 장점 결합
    - 10-fold CV로 안정성 확보
 
